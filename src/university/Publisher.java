@@ -16,10 +16,12 @@ public class Publisher {
     }
 
     public void setPublisherName(String publisherName) {
-        if (publisherName != null && !publisherName.isEmpty()) {
+        if (publisherName == null && publisherName.isEmpty()) {
+            throw new IllegalArgumentException("Поле не должно быть пустым");
+        }else
             this.publisherName = publisherName;
         }
-    }
+
         public void setCity (String city){
         if (city != null && ! city.isEmpty()){
             this.city = city;

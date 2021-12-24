@@ -49,7 +49,7 @@ private String autors[];
                 this.name = name;
     }
             public void setYear (int year){
-            if(year == 0){
+            if(year <= 0){
                 throw new IllegalArgumentException("Год издания должен быть больше нуля");
             }else
                 this.year = year;
