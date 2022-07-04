@@ -55,7 +55,7 @@ private String autors[];
                 this.year = year;
             }
             public void setPublisher (Publisher publisher){
-            if (publisher == null){
+            if (publisher == null  ){
                 throw new IllegalArgumentException("Поле издательства не должно быть пустым");
             }else
                 this.publisher = publisher;
@@ -73,7 +73,7 @@ private String autors[];
                 this.autors=autors;
             }
     public void print() {
-        if (getAutor() != null && !getAutor().equals("")) {
+        if (getAutor() != null && !getAutor().isEmpty()) {
             System.out.println("Название книги: " + getName() + "; Автор: " + getAutor() + " ; Издательство: " + getPublisher().getPublisherName() + "," + getPublisher().getCity() + "; Год издания: " + getYear());
         } else if (getAutors() != null && getAutors().length > 0) {
             System.out.println("Название книги: " + getName() + "; Авторы: " + Arrays.toString(getAutors()) + " ; Издательство: " + getPublisher().getPublisherName() + "," + getPublisher().getCity() + "; Год издания: " + getYear());
